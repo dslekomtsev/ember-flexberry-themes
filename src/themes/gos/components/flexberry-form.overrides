@@ -1,10 +1,16 @@
 // Main
+.ui.main.container > .stackable.grid.container > .row,
 .ui.form.flexberry-vertical-form {
   background: @editBackground;
   padding: @flexEditFormPadding;
   padding-bottom: @distanceL;
   // TODO: Сделать нормально
   min-height: calc(~'100% - 30px - 1em');
+}
+
+.ui.main.container > .stackable.grid.container > .row {
+  padding-top: @distanceS;
+  //height: calc(~'100% - 30px - 1em');
 }
 
 .flexberry-content.ui.attached.segment {
@@ -17,10 +23,13 @@
 }
 
 // Headers
-.ui.main.container > .stackable.grid.container > h3{
-  margin-top: 0;
-  font-weight: @headerFontWeight;
-  padding-left: @distanceL;
+.ui.main.container > .stackable.grid.container {
+  padding-top: @distanceS;
+  > h3{
+    margin-top: 0;
+    font-weight: @headerFontWeight;
+    padding-left: @distanceL;
+  }
 }
 
 // Buttons
@@ -38,7 +47,7 @@
   font-weight: @buttonFontWeight; 
   color: @editButtonsColor;
   &:focus {
-    border: @toolbarButtonFocusBorder;
+    border-color: transparent;
   }
 }
 
@@ -112,6 +121,10 @@
 .ui.input textarea:focus,
 .ui.input textarea:active {
     border-color: @defaultFocusBorderColor;
+}
+
+.ui.large.input > textarea {
+  font-size: @inputLargeFontSize;
 }
 
 /* Error field */

@@ -1,7 +1,6 @@
 // Flexberry-menu
-.ui.basic.buttons .flexberry-menu.ui.icon.dropdown.button,
+.flexberry-menu.ui.icon.dropdown.button,
 .menu.transition.visible .flexberry-menuitem.item {
-  // Костыли с импортантами! По другому пока что никак, в семантике тоже импортанты
   color: @flexberryMenuTextColor;
   font-weight: @flexberryMenuTextFontWeight;
   background: @flexberryMenuBackground; 
@@ -16,15 +15,9 @@
   }
 }
 
-.ui.basic.buttons {
-  border: @flexberryMenuBorder;
-}
-
-.ui.basic.buttons .flexberry-menu.ui.icon.dropdown.button:hover,
 .menu.transition.visible .flexberry-menuitem.item:hover {
-  background: @flexberryMenuButtonHover !important
+  background: @dropdownHoveredItemBackground;
 }
-
 // Vertical Menu
 
 .ui.basic.vertical.buttons {

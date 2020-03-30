@@ -26,14 +26,13 @@
 @flexEditFormPadding: 1px @distanceL;
 
 // Buttons
-@flexberryContentPadding: @distanceS 0 0 0;
+@flexberryContentPadding: 0;
 @headerFontWeight: 400;
 
 // Toolbar buttons
 @buttonFontWeight: @defaultMediumFontWeight;
 @editButtonsColor: @textColor;
 @closeButtonPaddingTop: unit(9 / 14, em);
-@toolbarButtonFocusBorder: none;
 
 //Icons
 @iconFontFamily: guideline-icons;

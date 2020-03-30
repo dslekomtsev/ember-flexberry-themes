@@ -2,6 +2,46 @@
   overflow: hidden;
 }
 
+/*******************************
+             Modal
+*******************************/
+.ui.modal {
+  top: 50vh;
+}
+
+/*******************************
+            Content
+*******************************/
+
+/*--------------
+     Close
+---------------*/
+
+.ui.modal > .close {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+.ui.modal i.icon.close:before {
+  content: "\e806";
+  font-family: 'Crimean';
+}
+
+/*--------------
+     Content
+---------------*/
+
+.ui.modal .ui.header {
+  font-weight: normal;
+}
+
+.ui.modal > .content:last-child {
+  padding-bottom: @modalPadding;
+}
+
+/*******************************
+            Sidepage
+*******************************/
 .ui.modal.flexberry-sidepage {
   height: 100vh;
   left: auto;
@@ -13,31 +53,11 @@
   &.scrolling {
     left: auto !important;
     top: @sidepageScrollingTopOffset !important;
-    overflow-y: auto;
-  }
-
-  .header {
-    border-bottom: none;
-    font-size: @sidepageHeaderFontSize;
-    font-weight: @defaultNormalFontWeight;
+    overflow-y: hidden;
   }
 
   .content {
     padding-top: 0;
-  }
-
-  .close {
-    top: 0;
-    right: 0;
-    padding: 0;
-    margin: @sidepageCloseButtonMargin;
-    color: @sidepageCloseButtonColor;
-    font-size: @sidepageCloseButtonFontSize;
-    font-family: @sidepageCloseButtonFontName;
-    
-    &::before {
-      content: @sidepageCloseButtonIcon;
-    }
   }
 }
 
