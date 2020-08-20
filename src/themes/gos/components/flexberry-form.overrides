@@ -48,25 +48,27 @@
 
 // Buttons
 .flexberry-edit-panel {
+  min-width: @editPanelMinWidth;
+
   .ui.button:first-child {
     padding-left: 0;
   }
-}
 
-.flexberry-edit-panel .ui.button.save-button,
-.flexberry-edit-panel .ui.button.save-close-button,
-.flexberry-edit-panel .ui.button.save-del-button,
-.flexberry-edit-panel .ui.button.close-button {
-  background: @pageBackground;
-  font-weight: @buttonFontWeight; 
-  color: @editButtonsColor;
-  &:focus {
-    border-color: transparent;
+  .ui.button.save-button,
+  .ui.button.save-close-button,
+  .ui.button.save-del-button,
+  .ui.button.close-button {
+    background: @pageBackground;
+    font-weight: @buttonFontWeight;
+    color: @editButtonsColor;
+    &:focus {
+      border-color: transparent;
+    }
   }
 }
 
 // Icons
-
+.icon.icon-save::before,
 .ui.button.save-button::before {
     // TODO: Добавить иконку дискеты с макета
     content: @saveIcon;
@@ -74,7 +76,8 @@
     font-size: @iconFontSize;
     padding-right: @iconPadding;
 }
-    
+
+.icon.icon-save-close,
 .ui.button.save-close-button {
     position: relative;
     &::before {
@@ -94,6 +97,21 @@
         top: 0.2em;
     }
 }
+
+// TODO: удалить после реализации новых иконок
+.icon.icon-save,
+.icon.icon-save-close,
+.icon.icon-save::before,
+.icon.icon-save-close::before {
+  padding: @buttonIconIndentation;
+  margin: @buttonIconIndentation;
+}
+
+.icon.icon-save-close::after {
+  left: @saveAndCloseButtonLeft;
+  top: @saveAndCloseButtonTop;
+}
+
 
 .ui.button.save-del-button::before {
     content: @deleteIcon;
